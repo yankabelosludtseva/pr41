@@ -19,6 +19,7 @@ namespace TimeLord_MVVM_Belosludtseva
         public MainWindow()
         {
             InitializeComponent();
+            frame.Navigate(new View.Main())
         }
     }
 }
