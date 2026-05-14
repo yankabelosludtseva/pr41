@@ -11,10 +11,10 @@ namespace TimeLord_MVVM_Belosludtseva.ViewModell
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value;}
-            remove { CommandManager.RequerySuggested += value;}
+            remove { CommandManager.RequerySuggested -= value;}
         }
 
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute)
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;
